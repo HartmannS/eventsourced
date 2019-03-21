@@ -1,0 +1,2 @@
+PROJECT := eventsourced
+VERSION := 0.1.0

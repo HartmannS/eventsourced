@@ -1,0 +1,22 @@
+server:
+  address: 0.0.0.0:2069
+
+broker:
+  node:
+    - amqp://guest:guest@10.0.0.10:5672/test # channelMax 2047
+    - amqp://guest:guest@10.0.0.11:5672/test # channelMax 2047
+
+queue:
+  pattern: ${query:id}
+  expires: 1800
+
+header:
+  cors:
+    Access-Control-Allow-Origin:  '*'
+    Access-Control-Allow-Methods: GET, OPTIONS
+    Access-Control-Allow-Headers: Content-Type, Accept, Cache-Control
+  sse:
+    Content-Type:      text/event-stream; charset=utf-8
+    Cache-Control:     no-cache
+    Transfer-Encoding: identity
+    X-Accel-Buffering: no

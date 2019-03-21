@@ -1,0 +1,8 @@
+eventsourced
+config.yml
+coverage
+.idea
+*.iml
+*.log
+*.test
+*.prof
